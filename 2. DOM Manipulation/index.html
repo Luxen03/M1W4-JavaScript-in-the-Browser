@@ -19,21 +19,29 @@
 
         // Todo 2.1 Select the unordered list with the id "subjects-taken"
         // Relevant Link: https://dev.to/alternate_robot/dom-selectors-in-javascript-344i
-        
+        let subjects = document.querySelectorAll('#subjects-taken > *');
+
         // Checkpoint 2.1 What are the other ways to select elements in the DOM?
-        // Answer: 
+        // Answer: document.getElementById('element-id')
+        let subjects2 = document.getElementById('subjects-taken');
         
         // Todo 2.2 Set the text of the first list item to "<>"
-
+        subjects[0].innerText = "<>";
         // Checkpoint 3.2 What is the difference between innerText, textContent, and innerHTML. When should you use one over the other
         // Answer:
+        //textContent: Gets the text of the selected element
+        //innerText: Gets the text of the selected element and its child elements
+        //innerHTML: Gets the html code of the selected element as text
 
         // Todo 2.3 Create another list item, and add it as a child of the unordered list
         // Relevant Link: https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
+        let newListItem = document.createElement("li");
+        document.getElementById('subjects-taken').appendChild(newListItem);
 
         // Todo 2.4 Set the id attribute of the list item you created to "favorite-subject". Set the class of the list item to "newly-created"
-
+        newListItem.setAttribute("favorite-subject", "newly-created");
         // Todo 2.5 Delete the second list item in the unordered list
+        subjects[1].Delete();
 
         // Checkpoint 2.3 Checkpoint what is the difference between node and element
 
