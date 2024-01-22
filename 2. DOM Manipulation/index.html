@@ -41,13 +41,16 @@
         // Todo 2.4 Set the id attribute of the list item you created to "favorite-subject". Set the class of the list item to "newly-created"
         newListItem.setAttribute("favorite-subject", "newly-created");
         // Todo 2.5 Delete the second list item in the unordered list
-        subjects[1].Delete();
+        subjects[1].removeChild();
 
         // Checkpoint 2.3 Checkpoint what is the difference between node and element
+        //elements are nodes that are specific to html
 
         // Bonus Todo 2.6 Select the parent of the unordered list.
+        console.log(document.getElementById('subjects-taken').parentElement);
 
         // Bonus Todo 2.7 Select the previous sibling of the list item you previously created
+        console.log(newListItem.previousSibling);
     </script>
 </body>
 
